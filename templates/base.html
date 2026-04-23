@@ -5,7 +5,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-<body>
+<body class="{{page}}">
+<canvas id="particles"></canvas>
+<div class="energy-bg"></div>
+
+<div class="side-text left">
+    G<br>E<br>N<br>D<br>E<br>R
+</div>
+
+<div class="side-text right">
+    B<br>R<br>E<br>I<br>Z<br>H
+</div>
 
 <div class="container">
 
@@ -19,4 +29,6 @@
 </div>
 
 </body>
+
+
 </html>
