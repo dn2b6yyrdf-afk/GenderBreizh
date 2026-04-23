@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Site Carnaval</title>
+    <title>Carnaval</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<nav>
-    <a href="/">Tâches à réaliser</a>
-    <a href="/fournitures">Fournitures</a>
-</nav>
-
 <div class="container">
+
+    <nav class="menu">
+        <a href="/" class="{% if page == 'taches' %}active{% endif %}">📋 Tâches</a>
+        <a href="/fournitures" class="{% if page == 'fournitures' %}active{% endif %}">📦 Fournitures</a>
+    </nav>
+
     {% block content %}{% endblock %}
+
 </div>
 
 </body>
